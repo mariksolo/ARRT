@@ -4,80 +4,65 @@ import getCriticalInfo from "../api/getCriticalInfo";
 import getInteractions from "../api/getInteractions";
 import { findByLabelText } from "@testing-library/react";
 import {
-    ListGroup,
-    Col,
-    Row,
-    Accordion,
-    Card,
-    Button,
-    Container
+  ListGroup,
+  Col,
+  Row,
+  Accordion,
+  Card,
+  Button,
+  Container
 } from "react-bootstrap";
 
 export class step2 extends Component {
-    async componentDidMount() {
-        let information = await getCriticalInfo(this.props.drug);
-        // console.log(JSON.parse(info));
+  async componentDidMount() {
+    let information = await getCriticalInfo(this.props.drug);
+    // console.log(JSON.parse(info));
 
-        // info = await info.json();
-        this.setState({ info: information }); //I have to make this so that it logs arrays within info
-        let interaction = await getInteractions(this.props.drug);
-        console.log(interaction);
-        this.setState({ interactions: interaction });
-    }
+    // info = await info.json();
+    this.setState({ info: information }); //I have to make this so that it logs arrays within info
+    let interaction = await getInteractions(this.props.drug);
+    console.log(interaction);
+    this.setState({ interactions: interaction });
+  }
 
-    state = {
-        info: [],
-        interactions: []
-    };
+  state = {
+    info: [],
 
-    render() {
-        return (
-            <Container className="pageContainer">
-                <div className="Step2">
-                    <h1 className="StepHeader headerColors">Warnings</h1>
+    interactions: []
+  };
 
-                    <Row>
-                        <Col md={6}>
-                            <h5 className="headerColors">Do Not Use</h5>
-                            <p>{this.state.info.do_not_use}</p>
-                        </Col>
+  render() {
+    return (
+      <Container className="pageContainer">
+        <div className="Step2">
+          <Col>
+            <h1 className="StepHeader headerColors">
+              Warnings and Maintenance
+            </h1>
+            <h5>{this.state.info.when_using}</h5>
+            <br />
 
-                        <Col md={6}>
-                            <h5 className="headerColors">Ask Doctor</h5>
-                            <p>{this.state.info.ask_doctor}</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12}>
-                            <h5 className="headerColors">Ask Pharmacist</h5>
-                            <p>{this.state.info.ask_doctor_or_pharmacist}</p>
-                        </Col>
-                    </Row>
+            <h3 className="headerColors">Do Not Use</h3>
+            <p>{this.state.info.do_not_use}</p>
 
-                    <Row>
-                        <Col md={12}>
-                            <div className="Interactions">
-                                <h5 className="headerColors">
-                                    Storage and Handling
-                                </h5>
+            <h3 className="headerColors">Ask Doctor</h3>
+            <p>{this.state.info.ask_doctor}</p>
 
-                                <p>{this.state.storage_and_handling}</p>
-                            </div>
+            <h3 className="headerColors">Ask Pharmacist</h3>
+            <p>{this.state.info.ask_doctor_or_pharmacist}</p>
 
-                            <div className="Purpose">
-                                <h5 className="headerColors">
-                                    Dosage and Administration
-                                </h5>
-                                <p>
-                                    {this.state.info.dosage_and_administration}
-                                </p>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-            </Container>
-        );
-    }
+            <h1>Proper Usage and Maintenance</h1>
+            {/* <h3>Dosage and Administration</h3> */}
+            
+            <h3>Dosage and Administration</h3>
+            <p>{this.state.info.dosage_and_administration}</p>
+
+
+          </Col>
+        </div>
+      </Container>
+    );
+  }
 }
 
 export default step2;

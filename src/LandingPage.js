@@ -132,10 +132,7 @@ class LandingPage extends React.Component {
               </div>
             </div>
           </header>
-          <div className="da-section bg-dark">
-          <Container className="svgContainer"> <Row ><FrontPageSVG /></Row></Container>
-              
-          </div>
+        
           <div className="da-section bg-light" id="services">
             <div className="da-services">
               <div className="container text-center">

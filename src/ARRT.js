@@ -12,7 +12,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Step1 from "./pages/Step1";
 import Step2 from "./pages/Step2";
-import Step3 from "./pages/Step3";
+import ReportingTool from "./pages/ReportingTool";
 import { useParams } from "react-router-dom";
 import { Container, Jumbotron, Tabs, Tab, TabPane } from "react-bootstrap";
 
@@ -97,7 +97,9 @@ class ARRT extends React.Component {
                                 <Step2 drug={this.props.match.params.drug} />
                             </Tab>
                             <Tab eventKey="step3" title="Reporting">
-                                <Step3 drug={this.props.match.params.drug} />
+                                <ReportingTool
+                                    drug={this.props.match.params.drug}
+                                />
                             </Tab>
                         </Tabs>
                     </div>

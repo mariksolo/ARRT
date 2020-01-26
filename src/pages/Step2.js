@@ -39,7 +39,7 @@ export class step2 extends Component {
             <h1 className="StepHeader headerColors">
               Warnings and Maintenance
             </h1>
-            <h5>{this.state.info.when_using}</h5>
+            <h5>{this.state.info.stop_use}</h5>
             <br />
 
             <h3 className="headerColors">Do Not Use</h3>
@@ -51,13 +51,14 @@ export class step2 extends Component {
             <h3 className="headerColors">Ask Pharmacist</h3>
             <p>{this.state.info.ask_doctor_or_pharmacist}</p>
 
-            <h1>Proper Usage and Maintenance</h1>
+            <h1 className="StepHeader">Proper Usage and Maintenance</h1>
             {/* <h3>Dosage and Administration</h3> */}
-            
+            <h3>When Using</h3>
+            <p>{this.state.info.when_using}</p>
             <h3>Dosage and Administration</h3>
             <p>{this.state.info.dosage_and_administration}</p>
 
-
+   
           </Col>
         </div>
       </Container>

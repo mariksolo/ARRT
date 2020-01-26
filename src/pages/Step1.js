@@ -41,7 +41,7 @@ export class step1 extends Component {
       <Container className="pageContainer">
         <div className="Step1">
           <Col>
-            <h1 className="stepHeader">General Information</h1>
+            <h1 className="StepHeader">General Information</h1>
 
             <p>Generic Name: {this.state.info.generic_name}</p>
             <p>Substance Name: {this.state.info.substance_name}</p>

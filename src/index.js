@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import LandingPage from "./LandingPage";
+import HomePage from "./HomePage";
 import Step1 from "./pages/Step1";
 import ARRT from "./ARRT";
 import * as serviceWorker from "./serviceWorker";
@@ -26,7 +27,7 @@ ReactDOM.render(
       {/* <ARRT/> */}
       {/* </Route> */}
       <Route path="/">
-        <LandingPage />
+        <HomePage />
       </Route>
     </Switch>
   </Router>,

@@ -39,3 +39,11 @@ p {
   padding-bottom: 30px;
 }
 /*End of Step 1*/
+
+.StepText {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}

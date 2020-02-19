@@ -26,6 +26,9 @@ ReactDOM.render(
       <Route path="/app/:drug" component={ARRT} />
       {/* <ARRT/> */}
       {/* </Route> */}
+      <Route path="/step1">
+        <Step1 />
+      </Route>
       <Route path="/">
         <HomePage />
       </Route>

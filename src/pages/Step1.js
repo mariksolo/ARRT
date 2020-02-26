@@ -51,6 +51,26 @@ export class step1 extends Component {
               </div>
               
             </div>
+
+            <h3>Purpose</h3>
+            <p>{this.state.info.purpose}</p>
+            {/* </Row>
+            <Row className="Usage"> */}
+            <h3>Indications and Usage</h3>
+            <p>{this.state.info.indications_and_usage}</p>
+            <h3>Product Type</h3>
+            <p>{this.state.info.product_type}</p>
+            {/* </Row> */}
+
+            <h3>Substance Interactions</h3>
+            <ListGroup>
+              {this.state.interactions.map(drug => (
+                <ListGroup.Item>{drug}</ListGroup.Item>
+              ))}
+              {/* <ListGroup.Item>Hi</ListGroup.Item> */}
+            </ListGroup>
+            <h3>Warnings</h3>
+            <p>{this.state.info.warnings}</p>
           </div>
           
         </div>

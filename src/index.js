@@ -6,6 +6,7 @@ import LandingPage from "./LandingPage";
 import HomePage from "./HomePage";
 import Step1 from "./pages/Step1";
 import ARRT from "./ARRT";
+import StepContainer from "./pages/StepContainer";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { step1 } from "./pages/Step1";
@@ -23,7 +24,7 @@ import { step1 } from "./pages/Step1";
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path="/app/:drug" component={ARRT} />
+      <Route path="/app/:drug" component={StepContainer} />
       {/* <ARRT/> */}
       {/* </Route> */}
       <Route path="/step1">
